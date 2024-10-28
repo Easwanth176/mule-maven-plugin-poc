@@ -40,7 +40,6 @@
 				<connectedAppClientSecret>${client_secret}</connectedAppClientSecret>
 				<connectedAppGrantType>client_credentials</connectedAppGrantType>
 				<environment>DEV</environment>
-				<server>anypoint-platform</server>
 				<region>us-east-2</region>
 				<workers>1</workers>
 				<workerType>MICRO</workerType>
