@@ -35,7 +35,7 @@
 			<cloudHubDeployment>
 				<uri>https://anypoint.mulesoft.com</uri>
 				<muleVersion>4.4.0</muleVersion>
-				<applicationName>mule-maven-plugin-cicd-poc</applicationName>
+				<applicationName>mule-maven-plugin-cicd-github-actions-poc</applicationName>
 				<connectedAppClientId>${client_id}</connectedAppClientId>
 				<connectedAppClientSecret>${client_secret}</connectedAppClientSecret>
 				<connectedAppGrantType>client_credentials</connectedAppGrantType>
