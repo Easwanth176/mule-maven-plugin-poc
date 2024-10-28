@@ -13,7 +13,7 @@ pipeline {
                 CLIENT_SECRET = credentials('anypoint_credentials')
             }
             steps {
-                bat """ mvn clean deploy -DmuleDeploy -Dclient_id=${CLIENT_ID} -Dclient_secret=${CLIENT_SECRET}"""
+                bat """ mvn clean deploy -DmuleDeploy -Dclient_id=${CLIENT_ID} -Dclient_secret=${CLIENT_SECRET} -X -e"""
             }
         }
     }
