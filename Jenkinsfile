@@ -9,11 +9,10 @@ pipeline {
         
         stage('Deploy CloudHub') {
             environment {
-                CLIENT_ID = credentials('anypoint_credentials')
-                CLIENT_SECRET = credentials('anypoint_credentials')
+                ANYPOINT_CREDENTIALS = credentials('anypoint_credentials')
             }
             steps {
-                bat """ mvn clean deploy -DmuleDeploy -Dclient_id=${CLIENT_ID} -Dclient_secret=${CLIENT_SECRET} -X -e"""
+                bat """ mvn clean deploy -DmuleDeploy -Dclient_id=${ANYPOINT_CREDENTIALS_USR} -Dclient_secret=${ANYPOINT_CREDENTIALS_PSW} -X -e"""
             }
         }
     }
