@@ -32,19 +32,20 @@
 
 				<configuration>
 
-					<cloudhub2Deployment>
-						<server>maven-sandbox-poc</server>
-						<environment>DEV </environment>
-						<target>Cloudhub-US-East-2</target>
-						<provider>MC</provider>
-						<muleVersion>4.4.0</muleVersion>
-						<applicationName>mule-maven-plugin-connected-app-poc-2</applicationName>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
-						<properties>
-							<http.port>8081</http.port>
-						</properties>
-					</cloudhub2Deployment>
+			<cloudHubDeployment>
+				<uri>https://anypoint.mulesoft.com</uri>
+				<muleVersion>4.4.0</muleVersion>
+				<applicationName>mule-maven-plugin-cicd-poc</applicationName>
+				<connectedAppClientId>${client_id}</connectedAppClientId>
+				<connectedAppClientSecret>${client_secret}</connectedAppClientSecret>
+				<connectedAppGrantType>client_credentials</connectedAppGrantType>
+				<environment>DEV</environment>
+				<server>anypoint-platform</server>
+				<region>us-east-2</region>
+				<workers>1</workers>
+				<workerType>MICRO</workerType>
+			</cloudHubDeployment>
+
 
 				</configuration>
 			</plugin>
